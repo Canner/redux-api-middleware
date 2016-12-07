@@ -5,6 +5,12 @@ redux-api-middleware
 
 [Redux middleware](http://rackt.github.io/redux/docs/advanced/Middleware.html) for calling an API.
 
+## What's the different of this fork?
+
+This fork change `isormorphoic-fetch` to `fetch-everywhere`.
+
+So it can work with `react-native`.
+
 ## Table of contents
 
 1. [Introduction](#introduction)
