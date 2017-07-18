@@ -4,7 +4,7 @@ import isPlainObject from 'lodash.isplainobject';
 import CALL_API from './CALL_API';
 import { isRSAA, validateRSAA } from './validation';
 import { InvalidRSAA, RequestError, ApiError } from './errors' ;
-import { getJSON, normalizeTypeDescriptors, actionWith } from './util';
+import { normalizeTypeDescriptors, actionWith } from './util';
 
 /**
  * A Redux middleware that processes RSAA actions.
@@ -100,7 +100,7 @@ function apiMiddleware({ getState }) {
 
     try {
       // Make the API call
-      var res = await fetch(endpoint, { method, body, credentials, headers });
+      var res = await fetch(endpoint, { method, body, credentials, headers: headers || {} });
     } catch(e) {
       // The request was malformed, or there was a network error
       return next(await actionWith(
