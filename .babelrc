@@ -1,7 +1,7 @@
 {
-  "stage": 0,
-  "loose": "all",
-  "optional": [
-    "runtime"
-  ]
+  "presets": [
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": ["transform-async-to-generator"]
 }
